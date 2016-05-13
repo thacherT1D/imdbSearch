@@ -1,4 +1,22 @@
-<div ng-controller="DetailCtrl">
-  <h1>Detail Page</h1>
-  {{view.movieData}}
+<div id="detailPageItem" ng-controller="DetailCtrl">
+  <h1>{{view.movieData.Title}}</h1>
+  <div class="row">
+    <div class="col-md-3">
+      <img ng-src="{{view.movieData.Poster}}"/>
+    </div>
+    <div class="col-md-9">
+      <h4>Staring</h4>
+      <p>{{view.movieData.Actors}}</p>
+      <h4>Plot</h4>
+      <p>{{view.movieData.Plot}}</p>
+      <h4>Rated</h4>
+      <p>{{view.movieData.Rated}}</p>
+      <h4>Runtime</h4>
+      <p>{{view.movieData.Runtime}}</p>
+      <h4>Year</h4>
+      <p>{{view.movieData.Year}}</p>
+      <h4>Awards</h4>
+      <p>{{view.movieData.Awards}}</p>
+    </div>
+  </div>
 </div>

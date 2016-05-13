@@ -1,19 +1,19 @@
 angular
-.module('imdbSearchApp', [
-    'ngRoute'
-  ])
+  .module('imdbSearchApp', [
+      'ngRoute'
+    ])
 
-.config(function($routeProvider) {
-  $routeProvider
-    .when('/', {
-      templateUrl: '../views/main.html',
-      controller: 'MainCtrl'
-    })
-    .when('/:ID', {
-      templateUrl: '../views/detail.html',
-      controller: 'DetailCtrl'
-    })
-    .otherwise({
-      redirectTo: '/'
+  .config(function($routeProvider) {
+    $routeProvider
+      .when('/:search', {
+        templateUrl: '../views/main.html',
+        controller: 'MainCtrl'
+      })
+      .when('/movie/:ID', {
+        templateUrl: '../views/detail.html',
+        controller: 'DetailCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
     });
-  });

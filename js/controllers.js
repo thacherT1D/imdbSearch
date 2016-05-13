@@ -1,12 +1,10 @@
 angular.module('imdbSearchApp')
-  .controller('MainCtrl', function($scope, $http) {
+  .controller('MainCtrl', function($scope, $http, $routeParams) {
     $scope.view = {};
-    $scope.search = function() {
-      $http.get('http://www.omdbapi.com/?s=' + $scope.view.movieTitle).then(function(data){
-        console.log(data.data.Search);
-        $scope.view.movieData = data.data.Search;
-      });
-    };
+    $http.get('http://www.omdbapi.com/?s=' + $routeParams.search).then(function(data){
+      // console.log(data.data.Search);
+      $scope.view.movieData = data.data.Search;
+    });
   })
   .controller('DetailCtrl', function($scope, $http, $routeParams) {
     $scope.view = {};
