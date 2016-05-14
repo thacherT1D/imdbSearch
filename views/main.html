@@ -1,9 +1,8 @@
-<div  id="resultRow" class="row" ng-repeat="movie in view.movieData">
-  <div class="col-md-3" >
+<div ng-repeat="movie in view.movieData">
+  <div id="searchResult" class="col-md-3" >
+    <div class="classWithPad">
     <img ng-src="{{movie.Poster}}"/>
+    <p><a ng-href='/#/movie/{{movie.imdbID}}'>Title: {{movie.Title}}</a></p>
   </div>
-  <div class="col-md-9" >
-    <a ng-href='/#/movie/{{movie.imdbID}}'>Title: {{movie.Title}}</a>
-    <p>Year: {{movie.Year}}</p>
   </div>
 </div>

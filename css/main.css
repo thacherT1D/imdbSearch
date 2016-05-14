@@ -2,15 +2,28 @@
   text-align: center;
 }
 img {
-  max-width: 165px;
+  max-height: 200px;
+  margin: 0 auto;
+}
+#searchResult {
+
+  /*margin: 5px;
+  padding: 5px;*/
+
 }
 #detailPageItem {
   background-color: #EDEEF2;
   margin: 10px;
   padding: 20px;
 }
-#resultRow {
+.classWithPad { margin:20px; padding:15px; background-color: #EDEEF2; min-height: 275px;}
+/*#resultRow {
   background-color: #EDEEF2;
   margin: 10px;
   padding: 10px;
-}
+}*/
+/*.searchCols {
+  width: 50%;
+  float: left;
+  margin: 20px;
+}*/
